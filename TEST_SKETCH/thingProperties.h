@@ -12,8 +12,10 @@
    GLOBAL CONSTANTS
  ******************************************************************************/
 
-#ifdef ARDUINO_SAMD_MKRWIFI1010
+#if defined(ARDUINO_SAMD_MKRWIFI1010)
 const char THING_ID[] = "2cfad7de-ae22-47c8-b0c4-a95db6b5572c"; /* CL-WIFI-1010-PROD */
+#elif defined(ARDUINO_SAMD_MKR1000)
+const char THING_ID[] = "71eb0f3a-2212-4b67-86d4-07d957e9f3cb"; /* CL-1000-PROD */
 #endif
 
 /******************************************************************************
@@ -41,7 +43,7 @@ void initProperties()
   ArduinoCloud.addProperty(seconds, READWRITE, ON_CHANGE, onSecondsChange);
 }
 
-#ifdef ARDUINO_SAMD_MKRWIFI1010
+#if defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_MKR1000)
 WiFiConnectionHandler ArduinoIoTPreferredConnection(SECRET_SSID, SECRET_PASS);
 #endif
 
