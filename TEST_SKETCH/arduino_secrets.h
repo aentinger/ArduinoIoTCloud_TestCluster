@@ -7,3 +7,6 @@
 #define SECRET_PASSWORD   ""
 
 #define SECRET_DEVICE_KEY ""
+
+#define SECRET_APP_EUI    ""
+#define SECRET_APP_KEY    ""
