@@ -10,3 +10,5 @@
 
 #define SECRET_APP_EUI    ""
 #define SECRET_APP_KEY    ""
+
+#define NB_SECRET_APN     ""

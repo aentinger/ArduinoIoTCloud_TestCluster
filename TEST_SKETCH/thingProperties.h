@@ -24,6 +24,9 @@ const char THING_ID[] = "a51e12e4-ee51-4b9e-907b-47b70fc80726";
 #elif defined(ARDUINO_SAMD_MKRWAN1300) || defined(ARDUINO_SAMD_MKRWAN1310)
 /* CL-WAN-1310-PROD-THING */
 const char THING_ID[] = "2ae809a8-b0cf-44d0-b967-0328e2db8f68";
+#elif defined(ARDUINO_SAMD_MKRNB1500)
+/* CL-NB-1500-PROD-THING */
+const char THING_ID[] = "428f7878-cb28-4891-8d58-5ab6806f88ed";
 #elif defined(BOARD_ESP8266)
 /* CL-ESP8266-PROD-THING */
 const char THING_ID[]          = "1572045a-b9f7-499f-8554-6be03cb35ea4";
@@ -65,6 +68,8 @@ WiFiConnectionHandler ArduinoIoTPreferredConnection(SECRET_SSID, SECRET_PASS);
 GSMConnectionHandler ArduinoIoTPreferredConnection(SECRET_PIN, SECRET_APN, SECRET_USERNAME, SECRET_PASSWORD);
 #elif defined(ARDUINO_SAMD_MKRWAN1300) || defined(ARDUINO_SAMD_MKRWAN1310)
 LoRaConnectionHandler ArduinoIoTPreferredConnection(SECRET_APP_EUI, SECRET_APP_KEY);
+#elif defined(ARDUINO_SAMD_MKRNB1500)
+NBConnectionHandler ArduinoIoTPreferredConnection("", NB_SECRET_APN, "", "");
 #endif
 
 #endif /* THING_PROPERTIES_H_ */
