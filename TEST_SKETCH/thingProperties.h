@@ -14,7 +14,7 @@
 
 #if defined(ARDUINO_SAMD_MKRWIFI1010)
 /* CL-WIFI-1010-PROD-THING */
-const char THING_ID[] = "2cfad7de-ae22-47c8-b0c4-a95db6b5572c";
+const char THING_ID[] = "6bc63fb8-8934-4f97-98ca-99ed06a05ea4";
 #elif defined(ARDUINO_SAMD_MKR1000)
 /* CL-1000-PROD-THING */
 const char THING_ID[] = "71eb0f3a-2212-4b67-86d4-07d957e9f3cb";
